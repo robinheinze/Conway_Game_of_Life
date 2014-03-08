@@ -1,0 +1,45 @@
+body {
+  background-color:   #5C0099;
+  color: white;
+}
+
+table {
+  border: 1px solid black;
+  text-align: center;
+}
+
+td {
+  height: 15px;
+  width: 15px;
+  border: 1px solid black;
+  opacity: .25;
+}
+
+.black {
+  background-color: black;
+}
+
+.white {
+  background-color: white;
+}
+
+.purple {
+  background-color:   #5C0099;
+}
+
+
+img#glider {
+  vertical-align: center;
+  margin: auto;
+}
+img#gun {
+  margin: auto;
+  vertical-align: center;
+}
+
+img:hover {
+  cursor: pointer;
+}
+
+
+
