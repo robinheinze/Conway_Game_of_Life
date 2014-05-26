@@ -1,5 +1,5 @@
 body {
-  background-color:   #5C0099;
+  background-color:   #6666CC;
   color: white;
 }
 
@@ -12,7 +12,7 @@ td {
   height: 15px;
   width: 15px;
   border: 1px solid black;
-  opacity: .25;
+  opacity: .5;
 }
 
 .black {
@@ -39,6 +39,14 @@ img#gun {
 
 img:hover {
   cursor: pointer;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: white;
 }
 
 
