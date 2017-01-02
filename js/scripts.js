@@ -17,26 +17,6 @@ var Cell = {
                       cellId + 31, cellId + 30, cellId + 29]
   },
 
-  // findCellState: function(X, Y) {
-  //   var searchResult;
-  //   World.population.forEach(function(currentCell) {
-  //     if (currentCell.coordinateString === X+","+Y) {
-  //       searchResult = currentCell;
-  //     }
-  //   });
-  //   return searchResult.state;
-  // },
-
-  // find: function(X, Y) {
-  //   var searchResult;
-  //   World.population.forEach(function(currentCell) {
-  //     if (currentCell.coordinateString === X+","+Y) {
-  //       searchResult = currentCell;
-  //     }
-  //   });
-  //   return searchResult;
-  // },
-
   liveNeighbors: function() {
     var counter = 0;
     for (var i = 0; i < this.neighbors.length; i++) {
@@ -65,20 +45,6 @@ var Cell = {
     }
   },
 
-  // if (liveCount < 2 && this.alive === true){
-  //     this.future = false;
-  //   } else if (this.alive === true && liveCount === 2){
-  //     this.future = true;
-  //   } else if (this.alive === true && liveCount === 3){
-  //     this.future = true;
-  //   } else if (liveCount > 3 && this.alive === true){
-  //     this.future = false;
-  //   } else if (this.alive === false && liveCount === 3){
-  //     this.future = true;
-  //   } else if ((this.cellId > 9700 || this.cellId < 301) && this.alive === true){
-  //     this.future = false;
-  //   }
-
   toggleState: function() {
     this.state = !this.state;
   },
@@ -93,7 +59,7 @@ var World = {
   population: [],
   populate: function() {
     for (var i = 0; i < 900; i++) {
-      World.population.push(Cell.create(i));  
+      World.population.push(Cell.create(i));
     }
   }
 }
@@ -138,7 +104,7 @@ $(document).ready(function() {
       });
 
       World.population.forEach(function(cell) {
-        
+
         if (cell.futureState === true) {
           $("td#"+cell.cellId).addClass('black');
           $("td#"+cell.cellId).removeClass('white');
@@ -147,8 +113,7 @@ $(document).ready(function() {
           $("td#"+cell.cellId).removeClass('black');
           $("td#"+cell.cellId).addClass('white');
           cell.state = false;
-        } 
-        //cell.makeDeadorAlive();
+        }
       });
 
     }, 100);
@@ -158,12 +123,5 @@ $(document).ready(function() {
     });
 
   });
-
-
-
-
-
-  
-
 
 });
